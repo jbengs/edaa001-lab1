@@ -1,5 +1,5 @@
 package textproc;
-
+//Kommentar i main från github.com! Lets see how this goes
 /**
  * Beskriver metoder för att behandla en sekvens av ord (som en bok), och därefter
  * presentera ett resultat med statistik av något slag.
