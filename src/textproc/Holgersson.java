@@ -47,15 +47,16 @@ public class Holgersson {
 		}
 
 		s.close();
-
+		generalProcessor.report();
+		/*
+		multiProcessor.report();
 		for (TextProcessor p : processorList) {
 			p.report();
 		}
-		multiProcessor.report();
-		generalProcessor.report();
 		feature1();
 		feature2();
 		importantBugFix();
+		 */
 	}
 
 	public static void feature1() {

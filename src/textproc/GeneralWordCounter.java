@@ -1,9 +1,7 @@
 package textproc;
 import textproc.TextProcessor;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class GeneralWordCounter implements TextProcessor {
     private Map<String, Integer> wordMap;
@@ -37,11 +35,21 @@ public class GeneralWordCounter implements TextProcessor {
      */
     @Override
     public void report() {
+        Set<Map.Entry<String, Integer>> wordSet = wordMap.entrySet();
+        List<Map.Entry<String, Integer>> wordList = new ArrayList<>(wordSet);
+        wordList.sort(new WordCountComparator());
+        for (int i = 0; i < 25; i++) {
+           System.out.println(i+1 + ": " + wordList.get(i).getKey() + ": " + wordList.get(i).getValue());
+        }
+
+        /* Från D8
         Set<String> output = wordMap.keySet();
         for (String s : output) {
             if (wordMap.get(s) >= 200){
                 System.out.println(s + ": " + wordMap.get(s));
             }
         }
+
+         */
     }
 }
