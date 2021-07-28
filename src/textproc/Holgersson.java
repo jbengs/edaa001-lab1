@@ -21,12 +21,16 @@ public class Holgersson {
 		processorList.add(new SingleWordCounter("nils"));
 		processorList.add(new SingleWordCounter("norge"));
 
+		TextProcessor multiProcessor = new MultiWordCounter(REGIONS);
+
 		Scanner s = new Scanner(new File("nilsholg.txt"));
 		s.findWithinHorizon("\uFEFF", 1);
 		s.useDelimiter("(\\s|,|\\.|:|;|!|\\?|'|\\\")+"); // se handledning
 
 		while (s.hasNext()) {
 			String word = s.next().toLowerCase();
+
+			multiProcessor.process(word);
 
 			for (TextProcessor p : processorList) {
 				p.process(word);
@@ -38,6 +42,9 @@ public class Holgersson {
 		for (TextProcessor p : processorList) {
 			p.report();
 		}
+
+		multiProcessor.report();
+
 		feature1();
 		feature2();
 		importantBugFix();
