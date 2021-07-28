@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Holgersson {
+	//Kommentar 3
 
 	public static final String[] REGIONS = { "blekinge", "bohuslän", "dalarna", "dalsland", "gotland", "gästrikland",
 			"halland", "hälsingland", "härjedalen", "jämtland", "lappland", "medelpad", "närke", "skåne", "småland",
@@ -30,6 +31,13 @@ public class Holgersson {
 		p.report();
 	}
 
+	public void feature1(){
+		System.out.println("feature1");
+	}
+
+	public void feature2(){
+		System.out.println("feature2");
+    
 	public void importantBugFix(){
 		System.out.println("bugfix");
 	}
