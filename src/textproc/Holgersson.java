@@ -37,5 +37,8 @@ public class Holgersson {
 
 	public void feature2(){
 		System.out.println("feature2");
+    
+	public void importantBugFix(){
+		System.out.println("bugfix");
 	}
 }
