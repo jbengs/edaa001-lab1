@@ -9,7 +9,7 @@ public class Scheduler {
 		i vektorn machines. */
 	
 	public Scheduler(Machine[] machineArray) {
-		Machine[] machines = machineArray;
+		machines = machineArray;
 	}
 	
 	/* Returnerar den maskin som har minst att göra. */
