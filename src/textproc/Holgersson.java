@@ -29,4 +29,8 @@ public class Holgersson {
 
 		p.report();
 	}
+
+	public void importantBugFix(){
+		System.out.println("bugfix");
+	}
 }
